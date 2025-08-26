@@ -1,0 +1,6 @@
+- Hệ thống được cấp nguồn và hoạt động ở chế độ deep sleep để tiết kiệm năng lượng.
+- Khi cảm biến hồng ngoại phát hiện chuyển động hoặc cảm biến từ phát hiện cửa bị mở, tín hiệu sẽ đánh thức ESP32.(Chỉ có cảm biến hồng ngoại phát hiện chuyển động mới gửi thông báo Blynk và chỉ hoạt động nếu systemEnabled = true).
+- Ngay sau khi thức dậy, hệ thống kết nối Wi-Fi:
+	+ Nếu kết nối thành công, thông báo “Motion Detected.” sẽ được gửi về ứng dụng Blynk trên thiết bị người dùng. Sau khi hoàn tất bước kết nối (hoặc hết thời gian chờ kết nối), hệ thống mới kích hoạt còi báo động trong khoảng 5 giây và hiển thị thông báo cảnh báo trên LCD.
+	+ Nếu không kết nối được Internet, hệ thống vẫn kích hoạt còi báo động và LCD nhưng không gửi thông báo về ứng dụng người dùng.
+- Khi hoàn thành báo động, hệ thống quay lại chế độ deep sleep để chờ tín hiệu đánh thức tiếp theo.
